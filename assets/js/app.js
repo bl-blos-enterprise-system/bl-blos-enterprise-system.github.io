@@ -1,13 +1,15 @@
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.9/+esm";
 import {
   SUPABASE_PUBLISHABLE_KEY,
   SUPABASE_URL,
 } from "./supabase-config.js";
 
-const APP_VERSION = "1.7.0";
+const { createClient } = globalThis.supabase || {};
+
+const APP_VERSION = "1.8.0";
 const STORAGE_PREFIX = "besPortalState_v1_7_0";
 const MAX_BACKUP_BYTES = 1_000_000;
 const CONFIG_READY =
+  typeof createClient === "function" &&
   SUPABASE_URL.startsWith("https://") &&
   SUPABASE_PUBLISHABLE_KEY.length > 20 &&
   !SUPABASE_PUBLISHABLE_KEY.includes("__SUPABASE_");
@@ -499,7 +501,7 @@ function exportData() {
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
-  anchor.download = `bes-access-portal-backup-${new Date().toISOString().slice(0, 10)}.json`;
+  anchor.download = `blos-enterprise-system-backup-${new Date().toISOString().slice(0, 10)}.json`;
   anchor.click();
   URL.revokeObjectURL(url);
   logEvent("Exportó un respaldo JSON");
@@ -893,7 +895,7 @@ async function startMfaEnrollment() {
   try {
     const { data, error } = await supabase.auth.mfa.enroll({
       factorType: "totp",
-      friendlyName: "BES Access Portal",
+      friendlyName: "BLOS Enterprise System",
     });
     if (error) throw error;
     enrollmentFactorId = data.id;
