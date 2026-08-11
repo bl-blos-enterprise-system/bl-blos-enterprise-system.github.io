@@ -1,10 +1,10 @@
 {
   "schema": "bes.release-manifest.v1",
-  "portal_version": "2.1.0",
+  "portal_version": "2.2.0",
   "approval_record": "BES-00-EVID-002-v1.0",
   "approval_date": "2026-08-11",
-  "controlled_document_codes": 7,
-  "published_files": 9,
+  "controlled_document_codes": 6,
+  "published_files": 8,
   "scope_note": "La aprobación documental no equivale a la liberación integral de los 14 pilares.",
   "files": [
     {
@@ -46,16 +46,6 @@
       "file": "BES-00-MAN-001-v2.0_Arquitectura_Organizacional_y_Operativa_BES.pdf",
       "bytes": 432323,
       "sha256": "0e96f83a13366653f1dde34d1d0121229f4725b4e5db3c9f771a99e5810c85d4"
-    },
-    {
-      "code": "BES-13-PPT-001",
-      "version": "2.0",
-      "title": "Presentación ejecutiva · expansión BES",
-      "status": "approved_released",
-      "approval_date": "2026-08-11",
-      "file": "BES-13-PPT-001-v2.0_Presentacion_Ejecutiva_Expansion_BES.pptx",
-      "bytes": 2455610,
-      "sha256": "0b0080219f840417ba6f415cc65ac0c6a246efea023b8417db28c45c5e2f5506"
     },
     {
       "code": "BES-GT-DIC-001",

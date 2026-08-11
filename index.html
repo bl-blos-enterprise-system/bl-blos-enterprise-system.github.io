@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#07111f">
   <title>BLOS Enterprise System | Best Linen</title>
+  <link rel="stylesheet" href="assets/css/ubl.css?v=2.2.0">
   <style>
     :root{--bg:#f4f7fb;--panel:#fff;--text:#122033;--muted:#65758b;--line:#dfe7f1;--brand:#0a6df0;--brand2:#064aa8;--ok:#07875d;--warn:#b76205;--shadow:0 18px 50px rgba(17,35,60,.09);--radius:18px}
     [data-theme=dark]{--bg:#07111f;--panel:#0d1a2b;--text:#f2f6fb;--muted:#9aabc0;--line:#20334a;--brand:#4d9aff;--brand2:#86b9ff;--ok:#47d5a1;--warn:#ffb45d;--shadow:0 18px 50px rgba(0,0,0,.25)}
@@ -325,6 +326,8 @@
         <span class="brand-copy"><strong>BLOS Enterprise System</strong><small>Consultoría operativa senior</small></span>
       </div>
       <nav class="nav" aria-label="Navegación principal">
+        <button data-page="onboarding">Inicio e inducción</button>
+        <button data-page="university">Universidad Best Linen</button>
         <button class="active" data-page="dashboard">Resumen</button>
         <button data-page="mastermap">Mapa Maestro BES</button>
         <button data-page="architecture">Centro de Arquitectura</button>
@@ -347,6 +350,64 @@
         <div class="top-actions"><button id="themeBtn" class="icon-btn" aria-label="Cambiar tema">◐</button><button id="exportTop" class="btn secondary hide-mobile">Exportar respaldo</button></div>
       </header>
       <div class="content">
+        <section id="onboarding" class="page">
+          <article class="ubl-hero ubl-hero--induction">
+            <div>
+              <span class="ubl-kicker">Ruta obligatoria de ingreso</span>
+              <h2>Conocer el propósito antes de ejecutar el proceso.</h2>
+              <p id="onboardingIntro">Cada persona inicia con la identidad Best Linen, comprende BES, BLOS y SIGO-BL, y después recibe su ruta según rol y área.</p>
+            </div>
+            <div class="ubl-progress-card">
+              <span id="onboardingStepLabel">Etapa 1 de 5</span>
+              <strong id="onboardingProgress">20%</strong>
+              <div class="ubl-progress"><span id="onboardingProgressBar" style="width:20%"></span></div>
+            </div>
+          </article>
+          <div id="onboardingStage" class="ubl-stage" aria-live="polite"></div>
+          <div id="onboardingActions" class="ubl-stage-actions"></div>
+        </section>
+
+        <section id="university" class="page">
+          <article class="ubl-hero">
+            <div>
+              <span class="ubl-kicker">Pilar 10 · Universidad Best Linen</span>
+              <h2>Crecer personas para transformar procesos.</h2>
+              <p>Cuando una persona aprende, mejora un proceso. Cuando toda la organización aprende, evoluciona la empresa.</p>
+            </div>
+            <div class="ubl-seal"><b>UBL</b><span>Aprender · Aplicar · Certificar</span></div>
+          </article>
+          <div class="ubl-metrics">
+            <div class="card ubl-metric"><span>Ruta asignada</span><strong id="ublRouteCount">0</strong><small>módulos por rol</small></div>
+            <div class="card ubl-metric"><span>Avance</span><strong id="ublCompletion">0%</strong><small>evidencia individual</small></div>
+            <div class="card ubl-metric"><span>Mejor resultado</span><strong id="ublBestScore">Sin intento</strong><small>meta de certificación ≥ 80%</small></div>
+            <div class="card ubl-metric"><span>Reconocimiento</span><strong id="ublRecognition">En desarrollo</strong><small>insignia por desempeño</small></div>
+          </div>
+          <div class="ubl-layout">
+            <article class="card ubl-panel">
+              <div class="section-head"><div><h3>Ruta formativa por rol</h3><span id="ublRolePathLabel">Asignación personalizada</span></div></div>
+              <div id="ublCoursePath" class="ubl-course-path"></div>
+            </article>
+            <article class="card ubl-panel">
+              <div class="section-head"><div><h3>Impacto del puesto</h3><span>Responsabilidad y riesgo operativo</span></div></div>
+              <div id="ublRoleImpact" class="ubl-impact"></div>
+            </article>
+          </div>
+          <article class="card ubl-panel ubl-evaluation-panel">
+            <div class="section-head"><div><h3>Evaluación de inducción BES</h3><span>5 reactivos · aprobación 80% · excelencia 100%</span></div><button id="ublStartEvaluation" class="btn" type="button">Iniciar evaluación</button></div>
+            <form id="ublEvaluationForm" class="ubl-evaluation hidden"></form>
+            <div id="ublEvaluationMessage" class="ubl-evaluation-message" aria-live="polite"></div>
+          </article>
+          <article class="card ubl-panel">
+            <div class="section-head"><div><h3>Resultados de capacitación</h3><span>Mejor resultado verificable por persona</span></div></div>
+            <div class="table-wrap"><table class="table ubl-results-table"><thead><tr><th>Participante</th><th>Rol</th><th>Mejor resultado</th><th>Intentos</th><th>Estado</th><th>Reconocimiento</th><th>Última evidencia</th></tr></thead><tbody id="ublResultsRows"></tbody></table></div>
+            <div class="ubl-data-note"><b>Integridad del tablero:</b> solo se muestran intentos registrados. Las metas no se presentan como resultados reales.</div>
+          </article>
+          <div class="ubl-layout">
+            <article class="card ubl-panel"><div class="section-head"><div><h3>Modelo de reconocimientos</h3><span>Basado en evidencia</span></div></div><div class="ubl-badges"><div><b>Habilitado BES</b><span>≥80% + ruta completa</span></div><div><b>Distinción Operativa</b><span>≥90% + práctica validada</span></div><div><b>Excelencia UBL</b><span>100% + evidencia de mejora</span></div><div><b>Mentor BES</b><span>Certificación + formación a terceros</span></div></div></article>
+            <article class="card ubl-panel"><div class="section-head"><div><h3>Plan Carrera Best Linen</h3><span>12 niveles</span></div></div><div class="ubl-career">Auxiliar <i>→</i> Auxiliar Senior <i>→</i> Especialista <i>→</i> Montacarguista <i>→</i> Auditor <i>→</i> Analista <i>→</i> Mesa de Control <i>→</i> Supervisor <i>→</i> Coordinador <i>→</i> Gerente <i>→</i> Gerente Senior <i>→</i> Director de Operaciones</div></article>
+          </div>
+        </section>
+
         <section id="dashboard" class="page active">
           <div class="welcome"><div><div class="eyebrow">Turno operativo</div><h2>Buenas tardes, <span id="greetingName">Usuario BES</span>.</h2><p id="welcomeCopy">Tienes 6 tareas pendientes para completar hoy.</p></div><div id="today" class="date-pill"></div></div>
           <div class="stats">
@@ -367,7 +428,7 @@
             </div>
           </article>
           <article class="card executive-launch" aria-label="Paquete ejecutivo BES v2.0 aprobado">
-            <div><div class="eyebrow">Liberación ejecutiva registrada</div><h3>Arquitectura BES v2.0 aprobada y liberada</h3><p>Seis documentos controlados, publicados en siete archivos, quedan vigentes bajo la constancia BES-00-EVID-002-v1.0. La siguiente fase es ejecutar el roadmap de 90 días.</p></div>
+            <div><div class="eyebrow">Liberación ejecutiva registrada</div><h3>Arquitectura BES v2.0 aprobada y liberada</h3><p>Seis documentos controlados, publicados en ocho archivos, quedan vigentes bajo la constancia BES-00-EVID-002-v1.0. La presentación se distribuye de forma privada fuera del portal.</p></div>
             <div class="executive-actions"><button class="btn" data-go="architecture">Abrir Centro de Arquitectura</button><button class="btn secondary" data-go="documents">Ver entregables</button></div>
           </article>
           <div class="grid">
@@ -382,7 +443,7 @@
           <div class="module-summary">
             <div class="card stat"><span class="label">Pilares totales</span><strong>14</strong><small>Arquitectura empresarial</small></div>
             <div class="card stat"><span class="label">Pilares en desarrollo</span><strong>14</strong><small>1 activo · 13 pendientes</small></div>
-            <div class="card stat"><span class="label">Documentos liberados</span><strong>6</strong><small>7 archivos controlados</small></div>
+            <div class="card stat"><span class="label">Documentos liberados</span><strong>6</strong><small>8 archivos controlados</small></div>
             <div class="card stat"><span class="label">Estructura estándar</span><strong>22</strong><small>Secciones por pilar</small></div>
           </div>
           <div class="map-callout"><span class="eyebrow">Regla de liberación</span><h3>Una carpeta vacía no constituye avance.</h3><p>Cada pilar debe contar con gobierno, responsables, RACI, manuales, procesos, capacitación, KPIs, riesgos, auditorías, evidencias y control de versiones antes de declararse liberado.</p></div>
@@ -396,7 +457,7 @@
             <div class="architecture-status"><span>Aprobado y liberado</span><span>Vigente desde 11/08/2026</span><span>Acceso protegido con MFA</span><span>Integridad SHA-256</span></div>
           </article>
           <article class="card approval-banner" aria-label="Constancia de aprobación documental">
-            <div class="approval-banner-copy"><div class="eyebrow" style="color:#d6b673">BES-00-EVID-002 · V1.0</div><h3>Aprobación registrada y trazable</h3><p>La liberación cubre la arquitectura, la presentación ejecutiva y el expediente de nueve puestos. No declara terminados los 14 pilares: cada uno conserva sus puertas G0–G4.</p></div>
+            <div class="approval-banner-copy"><div class="eyebrow" style="color:#d6b673">BES-00-EVID-002 · V1.0</div><h3>Aprobación registrada y trazable</h3><p>La liberación cubre la arquitectura y el expediente de nueve puestos. Los materiales de reunión se entregan directamente al propietario y no se publican en esta biblioteca.</p></div>
             <div class="approval-metric"><strong>6</strong><span>documentos controlados</span></div>
             <div class="approval-metric"><strong>7</strong><span>archivos originales aprobados</span></div>
             <div class="approval-metric"><strong>11 AGO</strong><span>fecha efectiva de liberación</span></div>
@@ -553,11 +614,10 @@
               </div>
             </div>
           </article>
-          <div class="public-library-notice"><b>Biblioteca ejecutiva aprobada y pública.</b> Seis documentos controlados, publicados en siete archivos originales, quedaron liberados el 11/08/2026. <a class="doc-link" data-bes-file href="/documents/release-manifest.json" download="release-manifest.json">Descargar evidencia técnica de integridad</a>. Todos los botones descargan desde este mismo dominio; nunca enlazan a bolsas de trabajo ni a sitios de terceros.</div>
+          <div class="public-library-notice"><b>Biblioteca operativa aprobada.</b> Seis documentos controlados, publicados en ocho archivos originales, quedaron liberados el 11/08/2026. <a class="doc-link" data-bes-file href="/documents/release-manifest.json" download="release-manifest.json">Descargar evidencia técnica de integridad</a>. Las presentaciones y formatos de reunión se entregan fuera del portal.</div>
           <div class="card table-wrap"><table class="table"><thead><tr><th>Código</th><th>Documento</th><th>Pilar</th><th>Versión</th><th>Estado</th><th>Archivo</th></tr></thead><tbody>
             <tr><td>BES-00-EVID-002</td><td>Constancia de aprobación y liberación documental</td><td>Gobierno BES</td><td>1.0</td><td class="status done">Vigente</td><td><a class="doc-link" data-bes-file href="/documents/BES-00-EVID-002-v1.0_Constancia_Aprobacion_y_Liberacion_Documental.pdf" download><span class="file-type">PDF</span> Descargar</a> · <a class="doc-link" data-bes-file href="/documents/BES-00-EVID-002-v1.0_Constancia_Aprobacion_y_Liberacion_Documental.docx" download><span class="file-type">DOCX</span> Descargar</a></td></tr>
             <tr><td>BES-00-MAN-001</td><td>Arquitectura organizacional y operativa BES</td><td>Gobierno BES</td><td>2.0</td><td class="status done">Aprobado y liberado</td><td><a class="doc-link" data-bes-file href="/documents/BES-00-MAN-001-v2.0_Arquitectura_Organizacional_y_Operativa_BES.pdf" download><span class="file-type">PDF</span> Descargar</a> · <a class="doc-link" data-bes-file href="/documents/BES-00-MAN-001-v2.0_Arquitectura_Organizacional_y_Operativa_BES.docx" download><span class="file-type">DOCX</span> Descargar</a></td></tr>
-            <tr><td>BES-13-PPT-001</td><td>Presentación ejecutiva — expansión BES</td><td>Dirección General</td><td>2.0</td><td class="status done">Aprobado y liberado</td><td><a class="doc-link" data-bes-file href="/documents/BES-13-PPT-001-v2.0_Presentacion_Ejecutiva_Expansion_BES.pptx" download><span class="file-type">PPTX</span> Descargar</a></td></tr>
             <tr><td>BES-GT-DIC-001</td><td>Dictamen ejecutivo para creación de nueve puestos</td><td>Gestión del Talento</td><td>1.0</td><td class="status done">Aprobado y liberado</td><td><a class="doc-link" data-bes-file href="/documents/BES-GT-DIC-001_Dictamen_Ejecutivo_Creacion_9_Puestos_v1.0.pdf" download><span class="file-type">PDF</span> Descargar</a></td></tr>
             <tr><td>BES-GT-MAN-001</td><td>Manual integral — nueve perfiles operativos</td><td>Gestión del Talento</td><td>1.0</td><td class="status done">Aprobado y liberado</td><td><a class="doc-link" data-bes-file href="/documents/BES-GT-MAN-001_Manual_Integral_9_Perfiles_v1.0.pdf" download><span class="file-type">PDF</span> Descargar</a></td></tr>
             <tr><td>BES-GT-MAT-001</td><td>Matriz RACI, sistemas y KPIs</td><td>Gestión del Talento</td><td>1.0</td><td class="status done">Aprobado y liberado</td><td><a class="doc-link" data-bes-file href="/documents/BES-GT-MAT-001_Matriz_RACI_Sistemas_KPI_v1.0.pdf" download><span class="file-type">PDF</span> Descargar</a></td></tr>
@@ -580,6 +640,6 @@
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="assets/js/supabase.umd.js"></script>
-  <script type="module" src="assets/js/app.js?v=2.1.0"></script>
+  <script type="module" src="assets/js/app.js?v=2.2.0"></script>
 </body>
 </html>
