@@ -5,7 +5,7 @@ import {
 
 const { createClient } = globalThis.supabase || {};
 
-const APP_VERSION = "2.0.0";
+const APP_VERSION = "2.1.0";
 const STORAGE_PREFIX = "besPortalState_v1_7_0";
 const MAX_BACKUP_BYTES = 1_000_000;
 const CONFIG_READY =
@@ -89,6 +89,7 @@ const TITLES = {
   dashboard: "Resumen operativo",
   mastermap: "Mapa Maestro BES",
   architecture: "Centro de Arquitectura BES",
+  valuechain: "Cadena de Valor BES",
   governance: "Gobierno BES",
   tasks: "Agenda operativa",
   warehouse: "Almacenes BL1–BL5",
@@ -114,19 +115,22 @@ const MODULES = [
 ];
 const MODULE_RECOVERY = {
   0: {
-    status: "Arquitectura v2.0 lista",
+    status: "Arquitectura v2.0 aprobada",
     detail:
-      "Manual maestro, 14 pilares, gobierno de información, RACI, KPIs y roadmap preparados para revisión de Dirección.",
+      "Manual maestro aprobado y liberado; los entregables pendientes del pilar conservan su avance individual.",
+    approvedEvidence: true,
   },
   11: {
-    status: "Expediente listo",
+    status: "Expediente aprobado",
     detail:
-      "Nueve perfiles, solicitudes, RACI/KPI y roadmap 30/60/90 preparados para autorización, con actividades y controles detallados.",
+      "Nueve perfiles, RACI/KPI y roadmap 30/60/90 aprobados como expediente de habilitación.",
+    approvedEvidence: true,
   },
   13: {
-    status: "Presentación lista",
+    status: "Presentación aprobada",
     detail:
-      "Presentación ejecutiva de 14 diapositivas validada visualmente y sin desbordamientos; aprobación de Dirección General pendiente.",
+      "Presentación ejecutiva de 14 diapositivas aprobada, liberada y lista para la sesión de Dirección.",
+    approvedEvidence: true,
   },
 };
 const GOVERNANCE_DOCS = [
@@ -592,7 +596,7 @@ function renderArchitecture() {
       <p>${detail}</p>
       <div class="module-state">
         <span class="state-pill ${index === 0 ? "building" : ""}">${status}</span>
-        <span class="release-no">No liberado</span>
+        <span class="${recovered?.approvedEvidence ? "release-yes" : "release-no"}">${recovered?.approvedEvidence ? "Evidencia aprobada" : "Pilar no liberado"}</span>
       </div>
       ${button}
     </article>`;
@@ -1046,6 +1050,26 @@ async function signOut() {
   }
 }
 
+function bindDocumentDownloads() {
+  selectAll("[data-bes-file]").forEach((anchor) => {
+    const validateDestination = () => {
+      try {
+        const url = new URL(anchor.getAttribute("href"), window.location.origin);
+        return url.origin === window.location.origin && url.pathname.startsWith("/documents/");
+      } catch {
+        return false;
+      }
+    };
+    anchor.addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (!validateDestination()) {
+        event.preventDefault();
+        toast("Descarga bloqueada: el destino no pertenece a la biblioteca BES");
+      }
+    });
+  });
+}
+
 function bindEvents() {
   select("#loginForm").addEventListener("submit", signIn);
   select("#demoProfiles").onclick = () =>
@@ -1071,6 +1095,7 @@ function bindEvents() {
   selectAll("[data-go]").forEach((button) => {
     button.onclick = () => showPage(button.dataset.go);
   });
+  bindDocumentDownloads();
   select("#menuBtn").onclick = () => select("#sidebar").classList.toggle("open");
   select("#themeBtn").onclick = () => {
     state.theme = state.theme === "dark" ? "light" : "dark";

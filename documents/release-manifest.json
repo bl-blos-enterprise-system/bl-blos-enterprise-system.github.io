@@ -1,0 +1,101 @@
+{
+  "schema": "bes.release-manifest.v1",
+  "portal_version": "2.1.0",
+  "approval_record": "BES-00-EVID-002-v1.0",
+  "approval_date": "2026-08-11",
+  "controlled_document_codes": 7,
+  "published_files": 9,
+  "scope_note": "La aprobación documental no equivale a la liberación integral de los 14 pilares.",
+  "files": [
+    {
+      "code": "BES-00-EVID-002",
+      "version": "1.0",
+      "title": "Constancia de aprobación y liberación documental",
+      "status": "approved_released",
+      "approval_date": "2026-08-11",
+      "file": "BES-00-EVID-002-v1.0_Constancia_Aprobacion_y_Liberacion_Documental.docx",
+      "bytes": 344343,
+      "sha256": "82e24200e72b69fae610e63b285ab6baf1373319615b249009eb04fc2730d670"
+    },
+    {
+      "code": "BES-00-EVID-002",
+      "version": "1.0",
+      "title": "Constancia de aprobación y liberación documental",
+      "status": "approved_released",
+      "approval_date": "2026-08-11",
+      "file": "BES-00-EVID-002-v1.0_Constancia_Aprobacion_y_Liberacion_Documental.pdf",
+      "bytes": 300199,
+      "sha256": "d6149b827765e05224f78dbf5603171caa885704420a49f5335f430d2f4a22c0"
+    },
+    {
+      "code": "BES-00-MAN-001",
+      "version": "2.0",
+      "title": "Arquitectura organizacional y operativa BES",
+      "status": "approved_released",
+      "approval_date": "2026-08-11",
+      "file": "BES-00-MAN-001-v2.0_Arquitectura_Organizacional_y_Operativa_BES.docx",
+      "bytes": 351786,
+      "sha256": "01412adc4737bdd53dc74a2124cacd906803e8fc5a44cc6e66190b17a340864a"
+    },
+    {
+      "code": "BES-00-MAN-001",
+      "version": "2.0",
+      "title": "Arquitectura organizacional y operativa BES",
+      "status": "approved_released",
+      "approval_date": "2026-08-11",
+      "file": "BES-00-MAN-001-v2.0_Arquitectura_Organizacional_y_Operativa_BES.pdf",
+      "bytes": 432323,
+      "sha256": "0e96f83a13366653f1dde34d1d0121229f4725b4e5db3c9f771a99e5810c85d4"
+    },
+    {
+      "code": "BES-13-PPT-001",
+      "version": "2.0",
+      "title": "Presentación ejecutiva · expansión BES",
+      "status": "approved_released",
+      "approval_date": "2026-08-11",
+      "file": "BES-13-PPT-001-v2.0_Presentacion_Ejecutiva_Expansion_BES.pptx",
+      "bytes": 2455610,
+      "sha256": "0b0080219f840417ba6f415cc65ac0c6a246efea023b8417db28c45c5e2f5506"
+    },
+    {
+      "code": "BES-GT-DIC-001",
+      "version": "1.0",
+      "title": "Dictamen ejecutivo · creación de nueve puestos",
+      "status": "approved_released",
+      "approval_date": "2026-08-11",
+      "file": "BES-GT-DIC-001_Dictamen_Ejecutivo_Creacion_9_Puestos_v1.0.pdf",
+      "bytes": 299134,
+      "sha256": "0355e2d954375a3be48d4941626973da180e1e12b463baee92f474a02b3ce0a9"
+    },
+    {
+      "code": "BES-GT-MAN-001",
+      "version": "1.0",
+      "title": "Manual integral · nueve perfiles operativos",
+      "status": "approved_released",
+      "approval_date": "2026-08-11",
+      "file": "BES-GT-MAN-001_Manual_Integral_9_Perfiles_v1.0.pdf",
+      "bytes": 329454,
+      "sha256": "8a426a7ca8d2e5c8468952a5f6969be8c75e6802ad43e6d911a1e789e3f409b5"
+    },
+    {
+      "code": "BES-GT-MAT-001",
+      "version": "1.0",
+      "title": "Matriz RACI, sistemas y KPIs",
+      "status": "approved_released",
+      "approval_date": "2026-08-11",
+      "file": "BES-GT-MAT-001_Matriz_RACI_Sistemas_KPI_v1.0.pdf",
+      "bytes": 300222,
+      "sha256": "4a9a7fd9bb0aa35e548534ea45b8c5373e3227d6c6a4e2f1d337177fb664a4a5"
+    },
+    {
+      "code": "BES-GT-RMP-001",
+      "version": "1.0",
+      "title": "Roadmap de habilitación 30/60/90 días",
+      "status": "approved_released",
+      "approval_date": "2026-08-11",
+      "file": "BES-GT-RMP-001_Roadmap_Habilitacion_90_Dias_v1.0.pdf",
+      "bytes": 298191,
+      "sha256": "debdf8f98f2bec16f15646a858b39d40665fe279d63cc07866a1d9a0a224ec94"
+    }
+  ]
+}
