@@ -188,6 +188,64 @@
       .chrome-footer{grid-template-columns:1fr;text-align:center}
       .chrome-footer span:last-child{text-align:center}
     }
+    .executive-launch{
+      margin-top:18px;padding:24px;display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:center;
+      background:linear-gradient(135deg,#0b2035,#123d63);color:#fff;border-color:rgba(179,138,61,.4)
+    }
+    .executive-launch h3{font-family:Georgia,"Times New Roman",serif;font-size:25px;margin:7px 0 9px}
+    .executive-launch p{margin:0;color:#c4d1dd;line-height:1.6}
+    .executive-actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+    .executive-actions .btn{background:var(--gold);color:#071522;text-decoration:none}
+    .executive-actions .btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.28)}
+    .architecture-hero{
+      overflow:hidden;padding:clamp(28px,5vw,56px);color:#fff;
+      background:radial-gradient(circle at 85% 5%,rgba(205,164,86,.2),transparent 27%),linear-gradient(135deg,#071522,#143f66);
+      border:1px solid rgba(179,138,61,.42);position:relative
+    }
+    .architecture-hero:after{content:"BES";position:absolute;right:32px;bottom:-28px;font:800 150px/1 Georgia,serif;color:rgba(255,255,255,.035)}
+    .architecture-hero h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,5vw,58px);line-height:1.04;margin:12px 0 16px;max-width:900px}
+    .architecture-hero p{max-width:850px;margin:0;color:#c2cfdb;line-height:1.7;font-size:16px}
+    .architecture-status{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .architecture-status span{padding:7px 10px;border:1px solid rgba(218,184,118,.44);border-radius:999px;color:#e4c581;font-size:10px;font-weight:850;letter-spacing:.08em;text-transform:uppercase}
+    .architecture-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}
+    .architecture-stat{padding:20px;border-top:3px solid var(--gold)}
+    .architecture-stat strong{display:block;font:700 32px/1 Georgia,serif;color:var(--brand)}
+    .architecture-stat span{display:block;margin-top:7px;color:var(--muted);font-size:12px;font-weight:750}
+    .architecture-section{margin-top:18px;padding:24px}
+    .architecture-section>h3{font-family:Georgia,"Times New Roman",serif;font-size:23px;margin:0 0 6px}
+    .architecture-section>.section-intro{margin:0 0 20px;color:var(--muted);line-height:1.6}
+    .pillar-board{display:grid;grid-template-columns:1fr 1fr;gap:9px 14px}
+    .pillar-item{display:grid;grid-template-columns:42px 1fr;gap:11px;align-items:center;padding:11px;border:1px solid var(--line);border-radius:11px;background:var(--bg)}
+    .pillar-item b:first-child{display:grid;place-items:center;height:30px;border-radius:8px;background:var(--gold-soft);color:var(--brand2);font-size:10px}
+    .pillar-item span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+    .architecture-columns{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    .architecture-panel{padding:24px;min-width:0}
+    .architecture-panel h3{font-family:Georgia,"Times New Roman",serif;font-size:21px;margin:0 0 16px}
+    .hierarchy-stack{display:grid;gap:8px;justify-items:center}
+    .hierarchy-level{padding:12px 16px;border-radius:10px;background:var(--brand);color:#fff;text-align:center;font-size:12px;font-weight:800}
+    .hierarchy-level:nth-child(2){width:78%;background:#19476f}.hierarchy-level:nth-child(3){width:88%;background:#235d8e}.hierarchy-level:nth-child(4){width:94%;background:#3578b9}.hierarchy-level:nth-child(5){width:100%;background:var(--gold);color:#071522}.hierarchy-level:first-child{width:65%}
+    .process-chain{display:flex;align-items:stretch;gap:7px;max-width:100%;overflow:auto;padding:4px 0 12px}
+    .process-node{min-width:118px;padding:15px 12px;border:1px solid var(--line);border-radius:11px;background:var(--bg);font-size:12px;font-weight:800;text-align:center}
+    .process-node.core{background:var(--brand);color:#fff;border-color:var(--brand)}
+    .transverse-list{display:grid;gap:8px;margin-top:12px}
+    .transverse-list div{padding:11px 13px;border-left:3px solid var(--gold);background:var(--bg);border-radius:0 10px 10px 0;font-size:12px;color:var(--muted)}
+    .transverse-list b{color:var(--text)}
+    .data-rule{margin-top:14px;padding:13px;border-left:3px solid var(--gold);background:var(--gold-soft);color:var(--muted);font-size:12px;line-height:1.55}
+    .role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .role-card{padding:15px;border:1px solid var(--line);border-radius:11px;background:var(--bg)}
+    .role-card b{display:block;color:var(--brand);font-size:13px}.role-card span{display:block;color:var(--muted);font-size:11px;line-height:1.45;margin-top:5px}
+    .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .roadmap-phase{overflow:hidden;border:1px solid var(--line);border-radius:13px;background:var(--panel)}
+    .roadmap-phase header{padding:15px;background:var(--brand);color:#fff}.roadmap-phase:nth-child(2) header{background:#276eb0}.roadmap-phase:nth-child(3) header{background:#228466}
+    .roadmap-phase header b{font:700 22px Georgia,serif}.roadmap-phase div{padding:15px;color:var(--muted);font-size:12px;line-height:1.55}
+    .director-decision{margin-top:18px;padding:22px;background:linear-gradient(135deg,#0b2035,#123d63);color:#fff;border-color:rgba(179,138,61,.4)}
+    .director-decision h3{font-family:Georgia,"Times New Roman",serif;margin:5px 0 8px;font-size:24px}.director-decision p{margin:0;color:#c4d1dd;line-height:1.6}
+    .public-library-notice{margin:0 0 18px;padding:16px;border:1px solid color-mix(in srgb,var(--ok) 35%,var(--line));border-radius:12px;background:color-mix(in srgb,var(--ok) 8%,var(--panel));color:var(--muted);font-size:13px;line-height:1.55}
+    .public-library-notice b{color:var(--text)}
+    .file-type{display:inline-flex;min-width:42px;justify-content:center;padding:4px 7px;border-radius:999px;background:var(--gold-soft);color:var(--brand2);font-size:9px;font-weight:900}
+    @media(max-width:1100px){.architecture-stats{grid-template-columns:1fr 1fr}.role-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:900px){.executive-launch,.architecture-columns{grid-template-columns:1fr}.executive-actions{justify-content:flex-start}.roadmap-grid{grid-template-columns:1fr}}
+    @media(max-width:650px){.pillar-board,.role-grid{grid-template-columns:1fr}.architecture-stats{grid-template-columns:1fr}.architecture-section,.architecture-panel{padding:18px}}
   </style>
 </head>
 <body>
@@ -268,6 +326,7 @@
       <nav class="nav" aria-label="Navegación principal">
         <button class="active" data-page="dashboard">Resumen</button>
         <button data-page="mastermap">Mapa Maestro BES</button>
+        <button data-page="architecture">Centro de Arquitectura</button>
         <button data-page="governance">Gobierno BES</button>
         <button data-page="tasks">Agenda operativa</button>
         <button data-page="warehouse">Almacenes BL1–BL5</button>
@@ -305,6 +364,10 @@
               <span class="vision-rule" aria-hidden="true"></span>
             </div>
           </article>
+          <article class="card executive-launch" aria-label="Paquete ejecutivo BES v2.0">
+            <div><div class="eyebrow">Entrega para Dirección</div><h3>Arquitectura BES v2.0 lista para presentar</h3><p>El paquete integra gobierno, 14 pilares, 22 carpetas estándar, nueve puestos, datos Odoo ↔ BL RACKS, RACI, KPIs y un roadmap de 90 días.</p></div>
+            <div class="executive-actions"><button class="btn" data-go="architecture">Abrir Centro de Arquitectura</button><button class="btn secondary" data-go="documents">Ver entregables</button></div>
+          </article>
           <div class="grid">
             <div class="card section-card"><div class="section-head"><div><h3>Prioridades del día</h3><span>Marca cada actividad al concluirla</span></div><button class="btn secondary" data-go="tasks">Ver agenda</button></div><div id="taskListDashboard" class="task-list"></div></div>
             <div>
@@ -313,7 +376,7 @@
           </div>
         </section>
         <section id="mastermap" class="page">
-          <div class="welcome"><div><div class="eyebrow">Arquitectura empresarial</div><h2>Mapa Maestro BES</h2><p>Estado, dependencias y liberación de los catorce pilares.</p></div><div class="date-pill">BES v1.0</div></div>
+          <div class="welcome"><div><div class="eyebrow">Arquitectura empresarial</div><h2>Mapa Maestro BES</h2><p>Estado, dependencias y liberación de los catorce pilares.</p></div><div class="date-pill">BES v2.0</div></div>
           <div class="module-summary">
             <div class="card stat"><span class="label">Pilares totales</span><strong>14</strong><small>Arquitectura empresarial</small></div>
             <div class="card stat"><span class="label">En construcción</span><strong>1</strong><small>Gobierno BES</small></div>
@@ -322,6 +385,69 @@
           </div>
           <div class="map-callout"><span class="eyebrow">Regla de liberación</span><h3>Una carpeta vacía no constituye avance.</h3><p>Cada pilar debe contar con gobierno, responsables, RACI, manuales, procesos, capacitación, KPIs, riesgos, auditorías, evidencias y control de versiones antes de declararse liberado.</p></div>
           <div id="moduleGrid" class="module-grid"></div>
+        </section>
+        <section id="architecture" class="page">
+          <article class="card architecture-hero">
+            <div class="eyebrow">BES-00-MAN-001 · Versión 2.0</div>
+            <h2>Arquitectura organizacional y operativa BES</h2>
+            <p>No estamos documentando una empresa. Estamos diseñando la empresa que Best Linen quiere llegar a ser: una organización gobernada por procesos, personas, datos, tecnología, evidencia y mejora continua.</p>
+            <div class="architecture-status"><span>Propuesta para Dirección</span><span>Contenido ejecutivo</span><span>Acceso protegido con MFA</span><span>Documentos visibles</span></div>
+          </article>
+          <div class="architecture-stats">
+            <div class="card architecture-stat"><strong>14</strong><span>Pilares estratégicos</span></div>
+            <div class="card architecture-stat"><strong>22</strong><span>Carpetas estándar por pilar</span></div>
+            <div class="card architecture-stat"><strong>9</strong><span>Puestos para habilitación</span></div>
+            <div class="card architecture-stat"><strong>90</strong><span>Días de primera implementación</span></div>
+          </div>
+          <article class="card architecture-section">
+            <h3>Arquitectura de 14 pilares</h3><p class="section-intro">Cada pilar gobierna decisiones, procesos, sistemas, documentos, KPIs, riesgos, responsables y evidencia.</p>
+            <div class="pillar-board">
+              <div class="pillar-item"><b>00</b><div><b>Gobierno BES</b><span>Arquitectura, estrategia y reglas maestras</span></div></div>
+              <div class="pillar-item"><b>07</b><div><b>Business Intelligence</b><span>KPIs, tableros y decisiones</span></div></div>
+              <div class="pillar-item"><b>01</b><div><b>BLOS Methodology</b><span>Estrategia, procesos, personas, tecnología y mejora</span></div></div>
+              <div class="pillar-item"><b>08</b><div><b>Calidad y Auditoría</b><span>Conformidad, evidencia y hallazgos</span></div></div>
+              <div class="pillar-item"><b>02</b><div><b>SIGO-BL</b><span>Sistema Integral de Gestión Operativa</span></div></div>
+              <div class="pillar-item"><b>09</b><div><b>Mejora Continua</b><span>Kaizen, A3, CAPA y estandarización</span></div></div>
+              <div class="pillar-item"><b>03</b><div><b>Operación Integral</b><span>Inbound, inventarios, outbound y control</span></div></div>
+              <div class="pillar-item"><b>10</b><div><b>Universidad Best Linen</b><span>Competencias, formación y certificación</span></div></div>
+              <div class="pillar-item"><b>04</b><div><b>Odoo Enterprise</b><span>Maestro transaccional y financiero</span></div></div>
+              <div class="pillar-item"><b>11</b><div><b>Gestión del Talento</b><span>Estructura, roles y desarrollo</span></div></div>
+              <div class="pillar-item"><b>05</b><div><b>BL RACKS</b><span>Trazabilidad física de racks</span></div></div>
+              <div class="pillar-item"><b>12</b><div><b>Control Documental</b><span>Codificación, versiones y vigencia</span></div></div>
+              <div class="pillar-item"><b>06</b><div><b>Integración Odoo ↔ BL RACKS</b><span>Conciliación y gobierno de datos</span></div></div>
+              <div class="pillar-item"><b>13</b><div><b>Dirección General</b><span>Portafolio, recursos y gobierno ejecutivo</span></div></div>
+            </div>
+          </article>
+          <div class="architecture-columns">
+            <article class="card architecture-panel"><h3>Línea de mando</h3><div class="hierarchy-stack"><div class="hierarchy-level">Dirección General / Gerencia Senior</div><div class="hierarchy-level">Gerencias de Área</div><div class="hierarchy-level">Jefaturas y Coordinaciones</div><div class="hierarchy-level">Supervisiones</div><div class="hierarchy-level">Especialistas y Operación</div></div></article>
+            <article class="card architecture-panel"><h3>Cadena de valor</h3><div class="process-chain"><div class="process-node">Compras</div><div class="process-node">Importación</div><div class="process-node">Fabricación</div><div class="process-node core">Inbound</div><div class="process-node">Inventarios</div><div class="process-node core">Outbound</div><div class="process-node">Facturación</div><div class="process-node">Cliente</div></div><div class="transverse-list"><div><b>Finanzas:</b> gastos, CxC, CxP y rentabilidad</div><div><b>Calidad:</b> 5S, Kaizen, causa raíz y CAPA</div><div><b>Soporte:</b> personas, mantenimiento y seguridad</div><div><b>Ingeniería:</b> PT, BPMN, SIPOC, KPIs y BI</div></div></article>
+          </div>
+          <article class="card architecture-section">
+            <h3>Mapa Maestro de Información · Odoo ↔ BL RACKS</h3><p class="section-intro">La fuente maestra crea y mantiene; el validador confirma; el consumidor registra incidencias sin corregir silenciosamente.</p>
+            <div class="table-wrap"><table class="table"><thead><tr><th>Dato</th><th>Fuente maestra</th><th>Valida</th><th>Consume</th><th>Control mínimo</th></tr></thead><tbody>
+              <tr><td>Orden de Compra</td><td><b>Odoo</b></td><td>Compras</td><td>Compras, Logística, Finanzas</td><td>OC autorizada y vigente</td></tr>
+              <tr><td>ETA</td><td><b>BL RACKS</b></td><td>Logística</td><td>Compras, Operaciones</td><td>ETA validada y comunicada</td></tr>
+              <tr><td>Alta de Rack</td><td><b>Ambos</b></td><td>Operaciones</td><td>Almacén, Inventarios</td><td>Identidad única y ubicación</td></tr>
+              <tr><td>Movimiento de Rack</td><td><b>BL RACKS</b></td><td>Operaciones</td><td>Odoo, conciliación</td><td>Origen, destino, usuario y fecha</td></tr>
+              <tr><td>Recepción PT</td><td><b>BL RACKS</b></td><td>Inventarios</td><td>Operaciones, Dirección</td><td>Cantidad, lote, condición y evidencia</td></tr>
+              <tr><td>Inventario</td><td><b>Odoo</b></td><td>Inventarios</td><td>Dirección, Finanzas</td><td>Existencia conciliada</td></tr>
+              <tr><td>Trazabilidad</td><td><b>BL RACKS</b></td><td>Operaciones</td><td>Dirección, Calidad</td><td>Historia conciliada con Odoo</td></tr>
+            </tbody></table></div>
+            <div class="data-rule"><b>Regla BES:</b> toda conciliación conserva sello de tiempo, usuario, causa, decisión y evidencia; las diferencias críticas se cierran mediante Mesa de Control.</div>
+          </article>
+          <article class="card architecture-section">
+            <h3>Expansión de puestos operativos</h3><p class="section-intro">Las actividades se detallan en el Manual Integral; la habilitación requiere perfil, formación, evaluación, acceso por rol y evidencia.</p>
+            <div class="role-grid">
+              <div class="role-card"><b>Mesa de Control</b><span>Prioridades, excepciones, conciliación y cierre diario.</span></div><div class="role-card"><b>Analista Inbound</b><span>OC, ETA, descarga, recepción, ubicación e incidencias.</span></div><div class="role-card"><b>Analista Outbound</b><span>Surtido, empaque, documentación, carga y ventana.</span></div>
+              <div class="role-card"><b>Coordinador de Operaciones</b><span>Capacidad, recursos, turnos, riesgos y escalamiento.</span></div><div class="role-card"><b>Montacarguista</b><span>Movimiento seguro, trazable y confirmado en sistema.</span></div><div class="role-card"><b>Auxiliar Multifuncional</b><span>Recibo, acomodo, surtido, empaque, conteos y 5S.</span></div>
+              <div class="role-card"><b>Analista de Inventarios</b><span>Conteos, conciliaciones, ajustes y exactitud.</span></div><div class="role-card"><b>Auditor de Operaciones</b><span>Adherencia, controles, hallazgos y cierre verificable.</span></div><div class="role-card"><b>Auditor de Calidad</b><span>Aceptación, no conformidades, causa raíz y CAPA.</span></div>
+            </div>
+          </article>
+          <article class="card architecture-section">
+            <h3>Roadmap de implementación 90 días</h3><p class="section-intro">Tres puertas de control convierten la arquitectura en una operación sostenible.</p>
+            <div class="roadmap-grid"><div class="roadmap-phase"><header><b>0–30</b> · Gobierno</header><div>Aprobar arquitectura, propietarios, RACI, índice maestro y backlog. <b>Puerta:</b> Dirección aprueba alcance y cadencia.</div></div><div class="roadmap-phase"><header><b>31–60</b> · Control</header><div>Liberar SOP/WI, matriz Odoo-RACKS, tableros y formación. <b>Puerta:</b> gerencias validan evidencia.</div></div><div class="roadmap-phase"><header><b>61–90</b> · Escala</header><div>Auditar, cerrar brechas, certificar y estandarizar. <b>Puerta:</b> Dirección autoriza la siguiente ola.</div></div></div>
+          </article>
+          <article class="card director-decision"><div class="eyebrow">Decisión solicitada</div><h3>Aprobar BES v2.0 como arquitectura rectora</h3><p>Designar propietarios de los 14 pilares y autorizar la primera ola de gobierno 0–30 días con revisión ejecutiva mensual.</p></article>
         </section>
         <section id="governance" class="page">
           <div class="welcome"><div><div class="eyebrow">Módulo 00 · v1.0</div><h2>Gobierno BES</h2><p>Autoridad normativa, arquitectura y control del sistema empresarial.</p></div><span class="state-pill building">En construcción</span></div>
@@ -383,16 +509,14 @@
               </div>
             </div>
           </article>
-          <div class="notice" style="margin:0 0 18px"><b>Catálogo documental identificado.</b> Los archivos no se publican desde GitHub Pages. Cada acceso permanecerá cerrado hasta completar la integración con Supabase Storage privado, las políticas RLS y las URLs firmadas de corta duración.</div>
+          <div class="public-library-notice"><b>Biblioteca ejecutiva visible.</b> El portal mantiene login, cambio obligatorio de contraseña y MFA; los entregables listados se abren directamente por instrucción de la propiedad.</div>
           <div class="card table-wrap"><table class="table"><thead><tr><th>Código</th><th>Documento</th><th>Pilar</th><th>Versión</th><th>Estado</th><th>Archivo</th></tr></thead><tbody>
-            <tr><td>STD-CD-001</td><td>Estándar maestro de estructura y formato documental</td><td>Control Documental</td><td>1.0</td><td class="status done">Vigente</td><td><button class="doc-link private-document" type="button" data-doc-code="STD-CD-001">Plantilla controlada · Storage privado</button></td></tr>
-            <tr><td>MAN-GT-001</td><td>Manual integral — nueve perfiles operativos</td><td>Gestión del Talento</td><td>1.0</td><td class="status">Propuesta para autorización</td><td><button class="doc-link private-document" type="button" data-doc-code="MAN-GT-001">Pendiente · Storage privado</button></td></tr>
-            <tr><td>DIC-GT-001</td><td>Dictamen ejecutivo para creación de puestos</td><td>Gestión del Talento</td><td>1.0</td><td class="status">Propuesta para autorización</td><td><button class="doc-link private-document" type="button" data-doc-code="DIC-GT-001">Pendiente · Storage privado</button></td></tr>
-            <tr><td>MAT-GT-001</td><td>Matriz RACI, sistemas y KPIs</td><td>Gestión del Talento</td><td>1.0</td><td class="status">Propuesta para autorización</td><td><button class="doc-link private-document" type="button" data-doc-code="MAT-GT-001">Pendiente · Storage privado</button></td></tr>
-            <tr><td>RMP-GT-001</td><td>Roadmap de habilitación 30/60/90 días</td><td>Gestión del Talento</td><td>1.0</td><td class="status">Propuesta para autorización</td><td><button class="doc-link private-document" type="button" data-doc-code="RMP-GT-001">Pendiente · Storage privado</button></td></tr>
-            <tr><td>PKG-GT-001</td><td>Expediente completo de creación de nueve puestos</td><td>Gestión del Talento</td><td>1.0</td><td class="status done">Paquete controlado</td><td><button class="doc-link private-document" type="button" data-doc-code="PKG-GT-001">Pendiente · Storage privado</button></td></tr>
-            <tr><td>PPT-DG-001</td><td>Presentación ejecutiva y organigrama</td><td>Dirección General</td><td>2.0</td><td class="status done">Validado visualmente</td><td><button class="doc-link private-document" type="button" data-doc-code="PPT-DG-001">Pendiente · Storage privado</button></td></tr>
-            <tr><td>EVI-DG-001</td><td>Paquete ejecutivo de organigrama y plantilla</td><td>Dirección General</td><td>2.0</td><td class="status done">Evidencia</td><td><button class="doc-link private-document" type="button" data-doc-code="EVI-DG-001">Pendiente · Storage privado</button></td></tr>
+            <tr><td>BES-00-MAN-001</td><td>Arquitectura organizacional y operativa BES</td><td>Gobierno BES</td><td>2.0</td><td class="status">Propuesta para Dirección</td><td><a class="doc-link" href="documents/BES-00-MAN-001-v2.0_Arquitectura_Organizacional_y_Operativa_BES.pdf" target="_blank" rel="noopener"><span class="file-type">PDF</span> Abrir</a> · <a class="doc-link" href="documents/BES-00-MAN-001-v2.0_Arquitectura_Organizacional_y_Operativa_BES.docx"><span class="file-type">DOCX</span> Descargar</a></td></tr>
+            <tr><td>BES-13-PPT-001</td><td>Presentación ejecutiva — expansión BES</td><td>Dirección General</td><td>2.0</td><td class="status done">Validado visualmente</td><td><a class="doc-link" href="documents/BES-13-PPT-001-v2.0_Presentacion_Ejecutiva_Expansion_BES.pptx"><span class="file-type">PPTX</span> Descargar</a></td></tr>
+            <tr><td>BES-GT-DIC-001</td><td>Dictamen ejecutivo para creación de nueve puestos</td><td>Gestión del Talento</td><td>1.0</td><td class="status">Propuesta para autorización</td><td><a class="doc-link" href="documents/BES-GT-DIC-001_Dictamen_Ejecutivo_Creacion_9_Puestos_v1.0.pdf" target="_blank" rel="noopener"><span class="file-type">PDF</span> Abrir</a></td></tr>
+            <tr><td>BES-GT-MAN-001</td><td>Manual integral — nueve perfiles operativos</td><td>Gestión del Talento</td><td>1.0</td><td class="status">Propuesta para autorización</td><td><a class="doc-link" href="documents/BES-GT-MAN-001_Manual_Integral_9_Perfiles_v1.0.pdf" target="_blank" rel="noopener"><span class="file-type">PDF</span> Abrir</a></td></tr>
+            <tr><td>BES-GT-MAT-001</td><td>Matriz RACI, sistemas y KPIs</td><td>Gestión del Talento</td><td>1.0</td><td class="status">Propuesta para autorización</td><td><a class="doc-link" href="documents/BES-GT-MAT-001_Matriz_RACI_Sistemas_KPI_v1.0.pdf" target="_blank" rel="noopener"><span class="file-type">PDF</span> Abrir</a></td></tr>
+            <tr><td>BES-GT-RMP-001</td><td>Roadmap de habilitación 30/60/90 días</td><td>Gestión del Talento</td><td>1.0</td><td class="status">Propuesta para autorización</td><td><a class="doc-link" href="documents/BES-GT-RMP-001_Roadmap_Habilitacion_90_Dias_v1.0.pdf" target="_blank" rel="noopener"><span class="file-type">PDF</span> Abrir</a></td></tr>
           </tbody></table></div>
         </section>
         <section id="audit" class="page">

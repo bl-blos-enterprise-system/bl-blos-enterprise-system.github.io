@@ -5,7 +5,7 @@ import {
 
 const { createClient } = globalThis.supabase || {};
 
-const APP_VERSION = "1.8.0";
+const APP_VERSION = "2.0.0";
 const STORAGE_PREFIX = "besPortalState_v1_7_0";
 const MAX_BACKUP_BYTES = 1_000_000;
 const CONFIG_READY =
@@ -88,6 +88,7 @@ const LINK_LABELS = {
 const TITLES = {
   dashboard: "Resumen operativo",
   mastermap: "Mapa Maestro BES",
+  architecture: "Centro de Arquitectura BES",
   governance: "Gobierno BES",
   tasks: "Agenda operativa",
   warehouse: "Almacenes BL1–BL5",
@@ -112,15 +113,20 @@ const MODULES = [
   "Dirección General",
 ];
 const MODULE_RECOVERY = {
+  0: {
+    status: "Arquitectura v2.0 lista",
+    detail:
+      "Manual maestro, 14 pilares, gobierno de información, RACI, KPIs y roadmap preparados para revisión de Dirección.",
+  },
   11: {
     status: "Expediente listo",
     detail:
       "Nueve perfiles, solicitudes, RACI/KPI y roadmap 30/60/90 preparados para autorización, con actividades y controles detallados.",
   },
   13: {
-    status: "Contenido avanzado",
+    status: "Presentación lista",
     detail:
-      "Presentación ejecutiva de 13 diapositivas validada visualmente; aprobación de Dirección General pendiente.",
+      "Presentación ejecutiva de 14 diapositivas validada visualmente y sin desbordamientos; aprobación de Dirección General pendiente.",
   },
 };
 const GOVERNANCE_DOCS = [
@@ -569,17 +575,16 @@ function cycleGovernance(index) {
 function renderArchitecture() {
   select("#moduleGrid").innerHTML = MODULES.map((name, index) => {
     const recovered = MODULE_RECOVERY[index];
-    const status =
-      index === 0 ? "En construcción" : recovered?.status || "Pendiente";
+    const status = recovered?.status || (index === 0 ? "En construcción" : "Pendiente");
     const detail =
       index === 0
         ? "Define las reglas, arquitectura, autoridad y control de BES."
         : recovered?.detail ||
           "Pendiente de Mapa del Pilar, gobierno y desarrollo documental.";
-    const destination = index === 0 ? "governance" : "documents";
+    const destination = index === 0 ? "architecture" : "documents";
     const button =
       index === 0 || recovered
-        ? `<button class="btn secondary" data-module-go="${destination}">${index === 0 ? "Abrir módulo" : "Ver evidencia"}</button>`
+          ? `<button class="btn secondary" data-module-go="${destination}">${index === 0 ? "Abrir arquitectura" : "Ver evidencia"}</button>`
         : "";
     return `<article class="card module-card ${index === 0 ? "building" : "pending"}">
       <span class="module-code">Módulo ${String(index).padStart(2, "0")}</span>
@@ -1099,14 +1104,6 @@ function bindEvents() {
     renderArchitecture();
     toast("Seguimiento restablecido");
   };
-  selectAll(".private-document").forEach((button) => {
-    button.onclick = () => {
-      logEvent(
-        `Solicitó documento ${button.dataset.docCode}; integración privada pendiente`,
-      );
-      toast("Documento pendiente de integración con Storage privado");
-    };
-  });
 }
 
 async function initialize() {
